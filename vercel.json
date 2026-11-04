@@ -1,0 +1,22 @@
+{
+  "rewrites": [],
+  "redirects": [],
+  "headers": [],
+  "routes": [
+    { "src": "/anr(.*)",        "status": 404, "dest": "/not-found" },
+    { "src": "/dj(.*)",         "status": 404, "dest": "/not-found" },
+    { "src": "/download(.*)",   "status": 404, "dest": "/not-found" },
+    { "src": "/marketplace(.*)", "status": 404, "dest": "/not-found" },
+    { "src": "/pricing(.*)",    "status": 404, "dest": "/not-found" },
+    { "src": "/streaming(.*)",  "status": 404, "dest": "/not-found" },
+    { "src": "/video(.*)",      "status": 404, "dest": "/not-found" },
+    { "src": "/api/anr(.*)",    "status": 404, "dest": "/not-found" },
+    { "src": "/api/dj(.*)",     "status": 404, "dest": "/not-found" },
+    { "src": "/api/marketplace(.*)", "status": 404, "dest": "/not-found" },
+    { "src": "/api/production(.*)",  "status": 404, "dest": "/not-found" },
+    { "src": "/api/streaming(.*)",   "status": 404, "dest": "/not-found" },
+    { "src": "/api/video(.*)",       "status": 404, "dest": "/not-found" },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}

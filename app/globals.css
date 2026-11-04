@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@source "../components/**/*.tsx";
+@source "../app/**/*.tsx";
+
+@theme {
+  --color-surface:   #f0f4f8;
+  --color-panel:     #ffffff;
+  --color-panel2:    #e8eef5;
+  --color-border:    #cdd8e8;
+  --color-muted:     #7a9abf;
+  --color-text-main: #1a2a3a;
+  --color-text-sub:  #4a6580;
+  --color-accent:    #38bdf8;
+  --color-brand:     #0284c7;
+  --color-brand2:    #0369a1;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --shadow-card: 0 1px 4px rgba(30,60,100,0.07), 0 4px 16px rgba(30,60,100,0.05);
+  --shadow-card-hover: 0 4px 12px rgba(30,60,100,0.12), 0 8px 24px rgba(30,60,100,0.08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: #f0f4f8;
+  color: #1a2a3a;
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #e8eef5; }
+::-webkit-scrollbar-thumb { background: #cdd8e8; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #7a9abf; }
+
+/* Waveform animation */
+@keyframes waveBar {
+  0%, 100% { transform: scaleY(0.3); }
+  50%       { transform: scaleY(1); }
+}
+.wave-bar { animation: waveBar 0.8s ease-in-out infinite; }
+.wave-bar:nth-child(2) { animation-delay: 0.1s; }
+.wave-bar:nth-child(3) { animation-delay: 0.2s; }
+.wave-bar:nth-child(4) { animation-delay: 0.3s; }
+.wave-bar:nth-child(5) { animation-delay: 0.4s; }
+
+/* Deck glow */
+.deck-active {
+  box-shadow: 0 0 0 2px #38bdf8, 0 0 24px 4px rgba(56,189,248,0.18);
+}
+
+/* Fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeIn 0.2s ease-out; }
+
+/* Card shadow */
+.card-shadow { box-shadow: 0 1px 4px rgba(30,60,100,0.07), 0 4px 16px rgba(30,60,100,0.05); }
+
+/* Gradient header */
+.gradient-header {
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f4f8 60%);
+}
+
+/* Range input */
+input[type="range"] { accent-color: #38bdf8; }
